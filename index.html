@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mister Blogger</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body class="main-layout">
+    <div onclick="onMenuOpen()" class="overlay"></div>
+    <header class="main-header main-layout full">
+        <div class="header-container flex align-center space-between">
+            <div class="brand">Blogin<span>.</span></div>
+            <nav class="main-nav">
+                <ul class="clean-list flex align-center">
+                    <li><a class="active" href="#">Journal</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div onclick="onMenuOpen()" class="hamburger">☰</div>
+        </div>
+    </header>
+
+    <main class="main-content">
+
+        <article class="card flex">
+            <img class="card-image" src="./images/001.jpg">
+            <div class="card-content">
+                <h2 class="card-title">Duis aute irure dolor in henderit in voluptate.</h2>
+                <p class="card-text">
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                    ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p class="card-text">
+                    Duis aute irure
+                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...
+                </p>
+                <a class="card-button" href="#">Continue Reading</a>
+            </div>
+        </article>
+
+        <article class="card flex">
+            <img class="card-image" src="./images/002.jpg">
+            <div class="card-content">
+                <h2 class="card-title">Duis aute irure dolor in henderit in voluptate.</h2>
+                <p class="card-text">
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                    ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p class="card-text">
+                    Duis aute irure
+                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...
+                </p>
+                <a class="card-button" href="#">Continue Reading</a>
+            </div>
+
+        </article>
+
+        <article class="card flex">
+            <img class="card-image" src="./images/003.jpg">
+            <div class="card-content">
+                <h2 class="card-title">Duis aute irure dolor in henderit in voluptate.</h2>
+                <p class="card-text">
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                    ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p class="card-text">
+                    Duis aute irure
+                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...
+                </p>
+                <a class="card-button" href="#">Continue Reading</a>
+            </div>
+        </article>
+
+        <section class="main-paging flex space-between">
+            <button class="paging-prev">&#8592 Previous</button><button class="paging-next">Next &#8594</button>
+        </section>
+
+    </main>
+
+    <footer class="main-footer full main-layout">
+        <div class="brand">Blogin<span>.</span></div>
+        <small>© 2022 Blogin.com  -  All Rights Reserved  -  Find more free Templates at <a href="https://Pixelhint.com">Pixelhint.com</a></small>
+        <ul class="clean-list flex center">
+            <li><a href="#"><i class="facebook flex center align-center fa-brands fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="twitter flex center align-center fa-brands fa-twitter"></i></a></li>
+        </ul>
+    </footer>
+
+
+    <script>
+        function onMenuOpen(){
+            document.body.classList.toggle('menu-open')
+            if(document.body.classList.contains('menu-open')) document.querySelector('.hamburger').innerText = '✖'
+            else document.querySelector('.hamburger').innerText = '☰'
+        }
+    </script>
+</body>
+
+</html>
