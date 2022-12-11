@@ -11,6 +11,7 @@
 </head>
 
 <body class="main-layout">
+    <div onclick="onRead()" class="modal-overlay"></div>
     <div onclick="onMenuOpen()" class="overlay"></div>
     <header class="main-header main-layout full">
         <div class="header-container flex align-center space-between">
@@ -41,7 +42,7 @@
                     Duis aute irure
                     dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...
                 </p>
-                <a class="card-button" href="#">Continue Reading</a>
+                <a onclick="onRead()" class="card-button" href="#">Continue Reading</a>
             </div>
         </article>
 
@@ -57,7 +58,7 @@
                     Duis aute irure
                     dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...
                 </p>
-                <a class="card-button" href="#">Continue Reading</a>
+                <a onclick="onRead()" class="card-button" href="#">Continue Reading</a>
             </div>
 
         </article>
@@ -74,13 +75,23 @@
                     Duis aute irure
                     dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...
                 </p>
-                <a class="card-button" href="#">Continue Reading</a>
+                <a onclick="onRead()" class="card-button" href="#">Continue Reading</a>
             </div>
         </article>
 
         <section class="main-paging flex space-between">
             <button class="paging-prev">&#8592 Previous</button><button class="paging-next">Next &#8594</button>
         </section>
+
+        <div class="modal">
+            <h2>Join us to get access to the latest stories!</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus voluptas veritatis, aliquid repellat possimus beatae dolorem natus doloremque culpa error optio consequuntur deleniti unde id facilis atque? Sint, mollitia dolores?</p>
+            <form action="">
+                <input type="email" placeholder="Your email address">
+                <button>Submit</button>
+            </form>
+            <button onclick="onRead()">Close</button>
+        </div>
 
     </main>
 
@@ -97,8 +108,14 @@
     <script>
         function onMenuOpen(){
             document.body.classList.toggle('menu-open')
-            if(document.body.classList.contains('menu-open')) document.querySelector('.hamburger').innerText = '✖'
+            if(document.body.classList.contains('menu-open')) {
+                document.querySelector('.hamburger').innerText = '✖'
+            }
             else document.querySelector('.hamburger').innerText = '☰'
+        }
+
+        function onRead(){
+            document.body.classList.toggle('modal-open')
         }
     </script>
 </body>
